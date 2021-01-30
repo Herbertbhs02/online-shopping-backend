@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- import css file -->
+     <link rel="stylesheet" href="/css/styles.css">
+
+    <title>admin</title>
+</head>
+<body>
+    <h2>New Product Upload</h2>
+    <form action="/" method="post">
+        <label for="image">Image link:</label><br>
+        <input  type="text" size="60"  name="image"><br>
+        <label for="product">Product:</label><br>
+        <input type="text" name="product"><br>
+        <label for="product">Product Category:</label><br>
+        <select name="category" id='category'>
+            <option value="Clothes">clothes</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Fruits">Fruits</option>  
+          </select><br>
+        <label for="product">Price:  </label><br>
+        <input type="text" name="price"><br>
+        <label for="product">Description:  </label><br>
+        <textarea rows="4" cols="50" maxlength="50" name="description"></textarea><br>
+         <input type="submit" name="button" value="Upload"> 
+        
+      </form> 
+      
+</body>
+</html>
