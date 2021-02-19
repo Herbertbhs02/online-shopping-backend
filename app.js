@@ -1,6 +1,8 @@
 const cors = require("cors");
 const express = require("express");
 const stripePayment = require('./stripePayment')
+const register = require('./register')
+const login = require('./login')
 const admin = require('./admin')
 const retrieveproducts = require('./retrieveproducts')
 const app = express();
@@ -25,6 +27,8 @@ mongoose.connect(BAMBI_CONNECT,
 app.use('/',stripePayment)
 app.use('/',admin)
 app.use('/',retrieveproducts)
+app.use('/',register)
+app.use('/',login)
 
 
 const port = process.env.PORT || 8080
