@@ -5,6 +5,7 @@ const register = require('./register')
 const login = require('./login')
 const admin = require('./admin')
 const retrieveproducts = require('./retrieveproducts')
+const purchaseHistory = require('./purchaseHistory')
 const app = express();
 const ejs = require("ejs");
 const mongoose = require('mongoose')
@@ -27,6 +28,7 @@ mongoose.connect(BAMBI_CONNECT,
 app.use('/',stripePayment)
 app.use('/',admin)
 app.use('/',retrieveproducts)
+app.use('/',purchaseHistory)
 app.use('/',register)
 app.use('/',login)
 

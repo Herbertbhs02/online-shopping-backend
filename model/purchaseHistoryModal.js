@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const cartSchema = new mongoose.Schema( {
    product: String,
-   price: Number
+   price: Number,
    qty: Number
 })
 
@@ -11,7 +11,11 @@ const cartSchema = new mongoose.Schema( {
 const purchaseSchema = new mongoose.Schema( {
     customerId: String,
     purchase: [cartSchema],
-    totalAmount: Number
+    totalAmount: Number,
+    date:{
+        type:Date,
+        default:Date.now
+    }
     
 })
-module.exports = mongoose.model("purchaseRecord", purchaseSchema );
+module.exports = mongoose.model("Customerpurchase", purchaseSchema );
