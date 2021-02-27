@@ -6,6 +6,8 @@ const login = require('./login')
 const admin = require('./admin')
 const retrieveproducts = require('./retrieveproducts')
 const purchaseHistory = require('./purchaseHistory')
+const customerHistory = require('./customerHistory')
+
 const app = express();
 const ejs = require("ejs");
 const mongoose = require('mongoose')
@@ -31,6 +33,7 @@ app.use('/',retrieveproducts)
 app.use('/',purchaseHistory)
 app.use('/',register)
 app.use('/',login)
+app.use('/',customerHistory)
 
 
 const port = process.env.PORT || 8080
